@@ -1,0 +1,13 @@
+#flechaUp{
+    position: fixed;
+    bottom: 30px;
+    right: 15px;
+    height: 30px;
+    width: 30px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+#flechaUp:hover{
+    transform: scale(1.2);
+}
+

@@ -1,0 +1,69 @@
+.fondo {
+    height: 100vh;
+    background-image: url(../../../assets/palacioDeJusticiaFondo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.divCirculo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circulo {
+    background: #000000bb;
+    border-radius: 50%;
+    height: 350px;
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.divLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 300px;
+}
+
+.divSubTitulo {
+    padding-top: 25px;
+    font-family: "Inria Serif", serif;
+    font-weight:bold;
+    font-style: normal;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+}
+
+/* .divButton {
+    padding-top: 25px;
+}
+
+.boton{
+    font-family: "Inter", sans-serif;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    background: var(--color-primario);
+} */
+
+@media screen and (max-width: 640px) {
+    .circulo {
+        background: var(--color-barra);
+        border-radius: 50%;
+        height: 350px;
+        width: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}

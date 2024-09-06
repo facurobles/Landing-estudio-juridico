@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+
+body{
+    --color-font: #00ff15;
+    --color-barra: #0000009a;
+    --font-family: 'VT323', monospace;
+    --color-primario: #E8C379;
+    --background: #1a1a1a;
+    --color-secundario: #FFE4AD;
+    
+}

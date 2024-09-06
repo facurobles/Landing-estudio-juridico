@@ -1,0 +1,33 @@
+.fondo{
+    padding-left: 10%;
+    display: flex;
+    align-items: center;
+}
+
+.containerTexto{
+    width: 50%;
+}
+
+.titulo{
+    font-size: 36px;
+    font-weight:bolder;
+}
+
+.texto{
+    font-family: "Inria Serif", serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 950px) {
+    .fondo{
+        padding-left: 20px;
+        padding-right: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    .containerTexto{
+        width: 100%;
+    }
+}

@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.fondo {
+    background: rgb(255, 255, 255);
+    height: 200vh;
+    position: relative;
+}
+
+.rowContainer {
+    height: 100%;
+    position: relative;
+}
+
+.fondoAmarillo {
+    background: var(--color-primario);
+    height: 100%;
+}
+
+.fondoBlanco {
+    padding: 0;
+    height: 100%;
+}
+
+.divCirculo {
+    height: 100%;
+    width: 100%;
+    padding-top: 150px;
+}
+
+.circulo {
+    padding-right: 25px;
+    /* width: 100%; */
+    height: 100%;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.divNosotros {
+    position: absolute;
+    top: calc(100vh + 130px);
+    right: 0;
+    height: calc(100vh -130px);
+    width: 100%;
+    padding-top: 40px;
+}
+
+/*servicios*/
+.containerTarjetasServicios {
+    padding-top: 130px;
+    padding-left: 10%;
+    height: calc(100vh + 130px);
+    width: 90%;
+    left: 0;
+    top: 0;
+    white-space: nowrap;
+    position: absolute;
+    display: block;
+}
+
+.titulo {
+    font-size: 36px;
+    font-weight: bolder;
+}
+
+.rowTarjetaServicios {
+    height: min-content;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+}
+
+.tarjetaServicio {
+    height: 240px;
+    width: 260px;
+    background: var(--color-secundario);
+    box-shadow: -10px 10px 4px rgba(0, 0, 0, 0.212);
+    white-space: normal;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.containerSubtitulo {
+    display: flex;
+    flex-direction: column;
+    height: 220px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.tarjetaServicio:hover {
+    .descripcion {
+        opacity: 100%
+    }
+
+    .iconoServicio {
+        opacity: 0%;
+
+    }
+
+    .subtitulo {
+        opacity: 0%;
+
+    }
+}
+
+.iconoServicio {
+    width: 100px;
+    transition: all 0.5s ease;
+
+}
+
+.subtitulo {
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.5s ease;
+
+}
+
+.descripcion {
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 220px;
+    font-size: 13.5px;
+    font-weight: bold;
+    overflow: hidden;
+    opacity: 0%;
+    transition: all 0.5s ease;
+    font-family: "Inria Serif", serif;
+    display: flex;
+    align-items: center;
+}
+
+/*CSS PARA VISTA MOBILE QUE SE ACTIVA EN PANTALLA DE UN ANCHO MENOR A 1100px*/
+
+.containerTarjetasServiciosMobile {
+    display: none;
+    padding-top: 130px;
+    padding-left: 1%;
+    height: calc(100vh + 130px);
+    width: 99%;
+    left: 0;
+    top: 0;
+    white-space: nowrap;
+    position: absolute;
+}
+
+.divTarjetaServicioMobile{
+    width: 100%;
+    height: min-content;
+    padding: 10px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.tarjetaServicioMobile{
+    background: var(--color-secundario);
+    width: 400px;
+    height: min-content;
+    box-shadow: -10px 10px 4px rgba(0, 0, 0, 0.212);
+    padding: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.tarjetaServicioMobile:hover{
+    .descripcionMobile{
+        max-height: 200px;
+    }
+}
+
+.iconoServicioMobile{
+    width: 30px;
+    height: 30px;
+}
+
+.subtituloMobile{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.containerSubtituloMobile{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.descripcionMobile{
+    width: 100%;
+    white-space: normal;
+    max-height: 0px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Inria Serif", serif;
+    transition: max-height 0.5s ease;
+}
+
+
+@media screen and (max-width: 1300px) {
+    .containerTarjetasServicios {
+        padding-top: 130px;
+        padding-left: 1%;
+        height: calc(100vh + 130px);
+        width: 99%;
+        left: 0;
+        top: 0;
+        white-space: nowrap;
+        position: absolute;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .containerTarjetasServiciosMobile {
+        display: block;
+    }
+
+    .containerTarjetasServicios {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+   
+    .divNosotros {
+        bottom: 20px;
+        height: min-content;
+        width: 100%;
+        top: auto;
+    }
+    .containerTarjetasServiciosMobile {
+        display: block;
+        padding-top: 50px;
+    }
+    .divCirculo{
+        display: none;
+    }
+    .titulo{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .titulo{
+        font-size: 23px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .titulo{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-height: 750px) {
+    .fondo {
+        background: rgb(255, 255, 255);
+        height: 230vh;
+        position: relative;
+    }
+}

@@ -1,0 +1,52 @@
+<div class="container-fluid fondo">
+    <div class="containerFormulario">
+        <form (ngSubmit)="onSubmit()" [formGroup]="contactForm">
+            <div class="row rowTitulo">
+                <div class="titulo">CONTÁCTANOS</div>
+            </div>
+            <div class="row rowCampos">
+                <div class="col colCampos">
+                    <div class="row rowInput">
+                        <input type="text" required formControlName="name" placeholder="Nombre y Apellido">
+                        <div class="alert alert-danger"
+                            *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.errors?.['required']">
+                            Este campo es obligatorio</div>
+                        <div class="alert alert-danger"
+                            *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.errors?.['minlength']">
+                            Mínimo 3 caracteres</div>
+                    </div>
+                    <div class="row rowInput">
+                        <input type="email" required formControlName="email" placeholder="Email">
+                        <div class="alert alert-danger"
+                            *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.errors?.['required']">
+                            Este campo es obligatorio</div>
+                        <div class="alert alert-danger"
+                            *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.errors?.['email']">
+                            Formato de email inválido</div>
+                    </div>
+                    <div class="row rowInput">
+                        <input type="text" required formControlName="numeroTelefono" placeholder="Numero de teléfono">
+                        <div class="alert alert-danger"
+                            *ngIf="contactForm.get('numeroTelefono')?.touched && contactForm.get('numeroTelefono')?.errors?.['required']">
+                            Este campo es obligatorio</div>
+                        <div class="alert alert-danger"
+                            *ngIf="contactForm.get('numeroTelefono')?.touched && contactForm.get('numeroTelefono')?.errors?.['invalidPhone']">
+                            Solo puede contener números, guiones y espacios</div>
+                    </div>
+                </div>
+                <div class="col colCampos">
+                    <div class="row rowInputMessage">
+                        <textarea maxlength="400" type="text" required formControlName="message" placeholder="Escriba su consulta"></textarea>
+                        <div class="alert alert-danger"
+                            *ngIf="contactForm.get('message')?.touched && contactForm.get('message')?.errors?.['required']">
+                            Este campo es obligatorio</div>
+                    </div>
+                </div>
+            </div>
+            <button [disabled]="contactForm.invalid" class="btn" type="submit" [ngClass]="contactForm.invalid ? 'btnInactivo' : 'btnActivo'">
+                <b>Enviar</b>
+            </button>
+
+        </form>
+    </div>
+</div>

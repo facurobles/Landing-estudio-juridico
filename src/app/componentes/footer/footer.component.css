@@ -1,0 +1,140 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.fondo{
+    height: 200px;
+    background: #e7ad39;
+    white-space: nowrap;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+.rowContainer{
+    height: 100%;
+}
+
+.col{
+    height: 100%;
+}
+
+#iconoWsp{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 40px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#iconoWsp:hover{
+    width: 50px;
+}
+
+.col1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col2{
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    justify-content: space-evenly;
+}
+
+.col3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rowItem{
+    width: min-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.item{
+    width: min-content;
+    font-size: 16px;
+    font-family: "Inria Serif", serif;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.icono{
+    width: 30px;
+}
+
+#iconoFooter{
+    height: 100px;
+}
+
+#mapa{
+    width: 70%;
+    height: 80%;
+}
+
+.itemDireccionMobile{
+    display: none;
+}
+
+@media screen and (max-width: 1100px) {
+    .itemDireccion{
+        display: none;
+    }
+    .itemDireccionMobile{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #iconoFooter{
+        height: 90px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .fondo{
+        height: min-content;
+    }
+
+    #iconoFooter{
+        height: 100px;
+    }
+
+    .rowItem{
+        padding-top: 5px;
+    }
+
+    .col3{
+        padding-top: 20px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #iconoFooter{
+        height: 80px;
+    }
+
+    .col2{
+        border-left: none;
+        border-right: none;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        padding-left: 25%;
+        justify-content: space-evenly;
+    }
+}
